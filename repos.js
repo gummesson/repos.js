@@ -19,7 +19,7 @@ function getGithubRepositories(username) {
 
 }
 
-$(document).ready(function(){
+$(document).ready(function() {
 
   "use strict";
   getGithubRepositories("USERNAME");
