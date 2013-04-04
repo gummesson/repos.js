@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>repos.js</title>
+</head>
+<body>
+  <h2>Github repositories</h2>
+  <ul id="repo-list">
+    <script id="github-repos" type="text/template">
+      {{#data}}
+        <li>
+        <a href="{{html_url}}" title="{{name}}" alt="{{name}}">
+          {{name}}
+        </a>
+        {{#language}}
+          <em>({{language}})</em>
+        {{/language}}
+        </li>
+      {{/data}}
+    </script>
+  </ul>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+  <script src="repos.js"></script>
+</body>
+</html>
