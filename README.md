@@ -4,7 +4,27 @@ Show your Github repositories on your website with a little help from [jQuery](h
 
 ## Usage
 
-Source all of the necessary Javascript files and replace `USERNAME` in the snippet below with your actual Github username.
+Source all of the necessary Javascript files and replace `USERNAME` with your actual Github username.
+
+### New version
+
+You can also change the script ID of your template and the element where the repos will be rendered:
+
+    $(document).ready(function() {
+
+      GithubRepos.init("USERNAME", {
+        repoTemplate: $("#github-repos"),
+        repoElement: $("#repo-list")
+      });
+
+    });
+
+
+### Old version
+
+*The old version is kept for reference purposes.*
+
+**Javascript:**
 
     $(document).ready(function(){
 
