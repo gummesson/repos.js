@@ -24,6 +24,7 @@
           repoElement  = this.config.repoElement;
 
       this.render(username, repoTemplate, repoElement);
+
     },
 
     get: function(username, callback) {
@@ -33,8 +34,10 @@
     render: function(username, repoTemplate, repoElement) {
 
       this.get(username, function(data) {
+
         var render = Mustache.render(repoTemplate, data);
         repoElement.html(render);
+
       });
 
     }
