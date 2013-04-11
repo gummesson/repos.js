@@ -1,4 +1,4 @@
-(function() {
+(function($) {
 
   "use strict";
 
@@ -48,4 +48,4 @@
     GithubRepos.init("USERNAME");
   });
 
-})();
+})(jQuery);
