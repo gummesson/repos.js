@@ -15,16 +15,12 @@
     },
 
     init: function(username, config) {
-
       if (config && typeof(config) === "object") {
         $.extend(this.config, config);
       }
-
       var repoTemplate = (this.config.repoTemplate).html(),
-          repoElement  = this.config.repoElement;
-
+          repoElement = this.config.repoElement;
       this.render(username, repoTemplate, repoElement);
-
     },
 
     get: function(username, callback) {
@@ -32,14 +28,10 @@
     },
 
     render: function(username, repoTemplate, repoElement) {
-
       this.get(username, function(data) {
-
         var render = Mustache.render(repoTemplate, data);
         repoElement.html(render);
-
       });
-
     }
 
   };
