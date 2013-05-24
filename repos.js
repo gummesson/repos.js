@@ -1,6 +1,6 @@
 (function($) {
 
-  "use strict";
+  'use strict';
 
   // Github repos
   //
@@ -10,12 +10,12 @@
   var GithubRepos = {
 
     config: {
-      repoTemplate: $("#github-repos"), // The Mustache script template id
-      repoElement: $("#repo-list")      // The element where the repos will be rendered
+      repoTemplate: $('#github-repos'), // The Mustache script template id
+      repoElement: $('#repo-list')      // The element where the repos will be rendered
     },
 
     init: function(username, config) {
-      if (config && typeof(config) === "object") {
+      if (config && typeof(config) === 'object') {
         $.extend(this.config, config);
       }
       var repoTemplate = (this.config.repoTemplate).html(),
@@ -24,7 +24,7 @@
     },
 
     get: function(username, callback) {
-      $.getJSON("https://api.github.com/users/" + username + "/repos?callback=?", callback);
+      $.getJSON('https://api.github.com/users/' + username + '/repos?callback=?', callback);
     },
 
     render: function(username, repoTemplate, repoElement) {
@@ -37,7 +37,7 @@
   };
 
   $(document).ready(function() {
-    GithubRepos.init("USERNAME");
+    GithubRepos.init('USERNAME');
   });
 
 })(jQuery);
